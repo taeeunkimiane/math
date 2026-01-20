@@ -1,4 +1,21 @@
-import React, { useState, useEffect } from 'react';
+# MM.py
+import streamlit as st
+import streamlit.components.v1 as components
+
+# HTML 파일 생성
+html_code = """
+<!DOCTYPE html>
+<html>
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, RefreshCw, Trophy, Zap, Brain, Target, Star, Award, Lock, Unlock, TrendingUp, Heart, Flame, Gift, Clock } from 'lucide-react';
 
 const MultiplicationMasterGame = () => {
@@ -808,3 +825,11 @@ const MultiplicationMasterGame = () => {
 };
 
 export default MultiplicationMasterGame;
+
+    </script>
+</body>
+</html>
+"""
+
+st.set_page_config(page_title="곱셈공식 마스터", layout="wide")
+components.html(html_code, height=1000, scrolling=True)
