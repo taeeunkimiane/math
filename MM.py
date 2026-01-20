@@ -38,20 +38,95 @@ html_code = """
                 />
             </svg>
         );
+    const Gift = ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+    </svg>
+);
 
-        // 테스트용 App (필수: 렌더링)
-        function App() {
-            return (
-                <div className="p-10 flex gap-4">
-                    <Trophy className="w-12 h-12 text-yellow-500" />
-                    <Star className="w-12 h-12 text-pink-500" />
-                </div>
-            );
-        }
+const Flame = ({ className }) => (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2c1.5 3.5 3 6 3 9 0 3-2 5-5 5s-5-2-5-5c0-3 1.5-5.5 3-9 1 2 2.5 4 4 6z" />
+    </svg>
+);
 
-        // React 18 렌더링 (이게 빠져 있었음)
-        const root = ReactDOM.createRoot(document.getElementById("root"));
-        root.render(<App />);
+const Unlock = ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+    </svg>
+);
+
+const Lock = ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+    </svg>
+);
+
+const Heart = ({ className }) => (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+    </svg>
+);
+
+const Clock = ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+);
+
+const Target = ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" strokeWidth={2} />
+        <circle cx="12" cy="12" r="6" strokeWidth={2} />
+        <circle cx="12" cy="12" r="2" fill="currentColor" />
+    </svg>
+);
+
+const Brain = ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+    </svg>
+);
+
+const Zap = ({ className }) => (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+        <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" />
+    </svg>
+);
+
+const CheckCircle = ({ className }) => (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+    </svg>
+);
+
+const XCircle = ({ className }) => (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z" />
+    </svg>
+);
+
+const RefreshCw = ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+    </svg>
+);
+
+const TrendingUp = ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+    </svg>
+);
+
+const Award = ({ className }) => (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="7" strokeWidth={2} />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.21 13.89L7 23l5-3 5 3-1.21-9.11" />
+    </svg>
+);
+        
+
+     
     </script>
 </body>
 </html>
@@ -862,7 +937,8 @@ const MultiplicationMasterGame = () => {
   );
 };
 
-export default MultiplicationMasterGame;
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<MultiplicationMasterGame />);
 
     </script>
 </body>
