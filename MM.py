@@ -1,8 +1,6 @@
-# MM.py
 import streamlit as st
 import streamlit.components.v1 as components
 
-# HTML 파일 생성
 html_code = """
 <!DOCTYPE html>
 <html>
@@ -14,9 +12,49 @@ html_code = """
 </head>
 <body>
     <div id="root"></div>
+
     <script type="text/babel">
-        // import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, RefreshCw, Trophy, Zap, Brain, Target, Star, Award, Lock, Unlock, TrendingUp, Heart, Flame, Gift, Clock } from 'lucide-react';
+        const { useState, useEffect } = React;
+
+        // Icon Components 추가
+        const Trophy = ({ className }) => (
+            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+            </svg>
+        );
+
+        const Star = ({ className }) => (
+            <svg className={className} fill="currentColor" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                />
+            </svg>
+        );
+
+        // 테스트용 App (필수: 렌더링)
+        function App() {
+            return (
+                <div className="p-10 flex gap-4">
+                    <Trophy className="w-12 h-12 text-yellow-500" />
+                    <Star className="w-12 h-12 text-pink-500" />
+                </div>
+            );
+        }
+
+        // React 18 렌더링 (이게 빠져 있었음)
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<App />);
+    </script>
+</body>
+</html>
 
 const MultiplicationMasterGame = () => {
   const [currentLevel, setCurrentLevel] = useState(1);
